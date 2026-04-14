@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aseel English</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #EAF6FF;
+  color: #1F2A44;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav {
+  background: white;
+  padding: 10px 25px;
+  border-radius: 40px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+nav button {
+  margin: 0 8px;
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #2B7FFF;
+  color: white;
+}
+
+/* MAIN SECTION */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  gap: 60px;
+  min-height: 90vh;
+}
+
+/* LOGO */
+.logo img {
+  width: 420px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* CONTENT */
+.content {
+  max-width: 550px;
+}
+
+/* BIG QUOTE */
+.quote {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.grade {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.call {
+  background: #2B7FFF;
+  color: white;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* CONTACT */
+.contact {
+  display: none;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.contact .btn {
+  max-width: 300px;
+  margin: 15px auto;
+}
+
+/* FLOAT BUTTON */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  .section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 250px;
+  }
+
+  .quote {
+    font-size: 28px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <button onclick="showPage('home')">HOME</button>
+    <button onclick="showPage('contact')">CONTACT</button>
+    <button onclick="setLang('ar')">ar</button>
+    <button onclick="setLang('en')">eng</button>
+  </nav>
+</header>
+
+<!-- HOME -->
+<div id="home" class="section">
+
+  <div class="logo">
+    <img src="english teacher.png">
+  </div>
+
+  <div class="content">
+
+    <div class="quote" id="quote">
+      تعلم الإنجليزية ليس مجرد مادة… بل مفتاح لمستقبل أقوى وثقة أكبر
+    </div>
+
+    <div class="card">
+      <h1 id="name">اسيل اشرف الطحاوي</h1>
+      <h2>English Teacher</h2>
+
+      <p id="desc">
+        مدرسة متخصصة في تبسيط اللغة الإنجليزية للطلاب، تساعدهم على الفهم بسهولة وبناء ثقة حقيقية.
+      </p>
+
+           <div class="buttons">
+        <a class="btn call" href="tel:01118314792">
+          <i class="fa-solid fa-phone"></i> CALL
+        </a>
+
+        <a class="btn whatsapp-btn" href="https://wa.me/201118314792" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="contact">
+  <h1 id="contactTitle">تواصل معنا</h1>
+
+  <a class="btn call" href="tel:01118314792">
+    <i class="fa-solid fa-phone"></i> CALL NOW
+  </a>
+
+  <a class="btn whatsapp-btn" href="https://wa.me/201118314792" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+  </a>
+</div>
+
+<!-- FLOAT -->
+<a class="float" href="https://wa.me/201118314792" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+function showPage(page){
+  document.getElementById('home').style.display='none';
+  document.getElementById('contact').style.display='none';
+
+  if(page==='home'){
+    document.getElementById(page).style.display='flex';
+  } else {
+    document.getElementById(page).style.display='block';
+  }
+}
+
+function setLang(lang){
+  if(lang==='ar'){
+    document.getElementById('name').innerText="اسيل اشرف الطحاوي";
+    document.getElementById('quote').innerText="تعلم الإنجليزية ليس مجرد مادة… بل مفتاح لمستقبل أقوى وثقة أكبر";
+    document.getElementById('desc').innerText="مدرسة متخصصة في تبسيط اللغة الإنجليزية للطلاب، تساعدهم على الفهم بسهولة.";
+    document.getElementById('grades').innerText="من الصف الرابع الابتدائي إلى الصف الثالث الإعدادي";
+    document.getElementById('contactTitle').innerText="تواصل معنا";
+  } else {
+    document.getElementById('name').innerText="Aseel Ashraf Eltahawy";
+    document.getElementById('quote').innerText="English is not just a subject… it is the key to a stronger future";
+    document.getElementById('desc').innerText="A professional English teacher helping students build confidence.";
+    document.getElementById('grades').innerText="From Grade 4 Primary to Grade 9";
+    document.getElementById('contactTitle').innerText="Contact Us";
+  }
+}
+</script>
+
+</body>
+</html>
